@@ -1,0 +1,18 @@
+---
+import Typewriter from "./Typewriter.jsx";
+import ViewContent from './ViewContent.jsx';
+---
+
+<main class="flex h-screen content-box">
+	<nav class="w-1/5 p-4 flex flex-col">
+	  <h1 class="mb-4">Jump to section:</h1>
+	  <ul class="m-0 p-0">
+		<li class="nb-anch"><a href="#about" class="block">About Lain</a></li>
+		<li class="nb-anch"><a href="#skills" class="block">Lain's skills</a></li>
+		<li class="nb-anch"><a href="#interests" class="block">Lain's interests</a></li>
+		<li class="nb-anch"><a href="#contact" class="block">Contact with Lain</a></li>
+	  </ul>
+	</nav>
+
+	<ViewContent client:load />
+</main>

@@ -1,0 +1,169 @@
+
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'ibm_vga8';
+    src: url(../webfonts/ibm_vga8.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --black-base: rgba(0, 0, 0, 1);
+    --white-base: rgba(170, 170, 170, 1);
+    --white-darker: rgba(85, 85, 85, 0.3);
+    --blue-base: rgba(0, 170, 170, 1);
+    --blue-darker: rgba(0, 170, 170, 0.7);
+    --blue-classic: rgba(0, 0, 170, 1);
+    --red-base: rgba(170, 0, 0, 1);
+    --green-base: rgba(0, 170, 0, 1);
+    --yellow-base: rgba(255, 255, 0, 1);
+    --purple-base: rgba(170, 0, 170, 1);
+}
+
+* {
+    background-color: var(--black-base);
+    color: var(--white-base);
+    font-family: 'ibm_vga8', monospace;
+}
+
+.content-box {
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+.nb-anch > a::before {
+    content: "\BB\a0";
+    color: var(--red-base) !important;
+    transition: margin-left, .2s ease-in;
+}
+
+.nb-anch > a:hover::before {
+    margin-left: .5em;
+}
+
+.nb-anch > a:hover {
+    color: var(--blue-darker) !important;
+}
+
+.nb-anch > a {
+    color: var(--blue-base) !important;
+}
+
+nav > h1 {
+    color: var(--blue-darker);
+}
+
+.ncurses-like-btn {
+    color: var(--white-base);
+    background-color: var(--blue-classic);
+    font-weight: 400;
+    text-align: center;
+    box-shadow: 8px 8px 0 0 var(--white-darker);
+    transition: color, background-color, .2s ease-in;
+}
+
+.ncurses-like-btn:hover {
+    color: var(--blue-classic);
+    background-color: var(--white-base);
+}
+
+.ncurses-like-btn::before {
+    content: '< ';
+}
+
+.ncurses-like-btn::after {
+    content: ' >';
+}
+
+.typewriter {
+    color: var(--green-base);
+}
+
+.typed-cursor {
+    color: var(--green-base);
+}
+
+form {
+    margin-top: 5vh;
+}
+
+form .form-row {
+    display: flex;
+    margin: 16px 0;
+}
+
+form .form-row .input-data {
+    height: 40px;
+    margin: 0 30px;
+    position: relative;
+    padding: 30px 0 0 0;
+}
+
+form .form-row .textarea {
+    height: 70px;
+}
+
+.input-data input,
+.textarea textarea {
+  position: relative;
+  padding-left: 15px;
+  display: block;
+  border: none;
+  font-size: 15px;
+  caret-color: var(--green-base);
+  color: var(--green-base);
+  background-color: transparent;
+}
+
+.input-data input:focus,
+.textarea textarea:focus {
+  border: none;
+  outline: none;
+}
+
+.input-data input:focus::placeholder,
+.textarea textarea:focus::placeholder {
+    color: transparent;
+}
+
+.textarea textarea {
+    resize: none;
+}
+
+.input-data label {
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    font-size: 16px;
+    color: var(--green-base);
+}
+
+.textarea label {
+    width: 100%;
+    bottom: 40px;
+    color: var(--green-base);
+}
+
+.submit-btn .input-data {
+    height: 45px !important;
+    width: 25% !important;
+}
+
+.submit-btn .input-data input {
+    background-color: var(--blue-classic);
+    color: var(--white-base);
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 10px 10px 10px;
+    font-size: 1em;
+    transition: color, background-color, .2s ease-in;
+}
+
+.submit-btn .input-data input:hover {
+    background-color: var(--white-base);
+    color: var(--blue-classic);
+}
